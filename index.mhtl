@@ -1,0 +1,42 @@
+# alftupup.-com. <!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ALF TOP UP</title>
+<style>
+body{margin:0;background:#101323;color:white;font-family:Arial;text-align:center}
+header{background:#171e38;padding:22px;color:#00eaff;font-size:27px;font-weight:bold}
+.box{background:#202945;margin:20px;padding:20px;border-radius:15px}
+input,select,button{width:90%;padding:13px;margin:9px;border:0;border-radius:8px}
+button{background:#00d9ff;font-weight:bold;font-size:17px}
+</style>
+</head>
+<body>
+<header>ALF TOP UP</header>
+<div class="box">
+<h2>Free Fire Diamond Top Up</h2>
+<input id="uid" placeholder="Free Fire UID">
+<select id="diamond">
+<option value="25 Diamond">25 Diamond</option>
+<option value="50 Diamond">50 Diamond</option>
+<option value="115 Diamond">115 Diamond</option>
+<option value="240 Diamond">240 Diamond</option>
+<option value="610 Diamond">610 Diamond</option>
+</select>
+<input id="phone" placeholder="আপনার মোবাইল নম্বর">
+<button onclick="order()">অর্ডার করুন</button>
+<p id="result"></p>
+</div>
+<script>
+function order(){
+let uid=document.getElementById('uid').value;
+let diamond=document.getElementById('diamond').value;
+let phone=document.getElementById('phone').value;
+if(!uid||!phone){alert('সব তথ্য পূরণ করুন');return;}
+document.getElementById('result').innerText=
+'অর্ডার তথ্য: UID '+uid+' | '+diamond+' | '+phone;
+}
+</script>
+</body>
+</html>
